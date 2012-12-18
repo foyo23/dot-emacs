@@ -160,7 +160,7 @@
 (semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion 
 (global-srecode-minor-mode 1)            ; Enable template insertion menu
 
-(add-to-list 'load-path "~/ecb-2.40")
+(add-to-list 'load-path "~/.emacs.d/ecb-2.40")
 ;;ecb source code browser
 ;(require 'ecb)
 (require 'ecb-autoloads)
