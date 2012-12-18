@@ -106,6 +106,8 @@
 ;;不生成临时文件
 (setq-default make-backup-files nil)
 
+;;使用utf-8编码
+(prefer-coding-system 'utf-8-with-signature)
 
 ;;只渲染当前屏幕语法高亮，加快显示速度
 (setq lazy-lock-defer-on-scrolling t)
@@ -123,6 +125,11 @@
 (setq x-select-enable-clipboard t)
 ;;设定剪贴板内容格式    适应Firefox
 (set-clipboard-coding-system 'ctext)
+
+(setq auto-mode-alist
+      (cons '("SConstruct" . python-mode) auto-mode-alist))
+(setq auto-mode-alist
+      (cons '("SConscript" . python-mode) auto-mode-alist))
 
 (add-to-list 'load-path "~/.emacs.d")
 
@@ -148,7 +155,7 @@
 (yas/load-directory "~/.emacs.d/plugins/yasnippet-0.6.1c/snippets")
 
 ;;cedet development environment
-(load-file "~/cedet-1.0/common/cedet.el")
+(load-file "~/.emacs.d/cedet-1.0/common/cedet.el")
 (global-ede-mode 1)                      ; Enable the Project management system
 (semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion 
 (global-srecode-minor-mode 1)            ; Enable template insertion menu
@@ -192,3 +199,7 @@
 ;;(add-to-list 'load-path "~/.emacs.d/textmate.el")
 (require 'textmate)
 (textmate-mode)
+
+(add-to-list 'load-path "~/.emacs.d/highlight-regexp.el")
+(require 'highlight-regexp)
+
