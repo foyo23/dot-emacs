@@ -107,7 +107,8 @@
 (setq-default make-backup-files nil)
 
 ;;使用utf-8编码
-(prefer-coding-system 'utf-8-with-signature)
+;;(prefer-coding-system 'utf-8-with-signature)
+(prefer-coding-system 'utf-8)
 
 ;;只渲染当前屏幕语法高亮，加快显示速度
 (setq lazy-lock-defer-on-scrolling t)
@@ -154,11 +155,12 @@
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/plugins/yasnippet-0.6.1c/snippets")
 
-;;cedet development environment
-(load-file "~/.emacs.d/cedet-1.0/common/cedet.el")
-(global-ede-mode 1)                      ; Enable the Project management system
-(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion 
-(global-srecode-minor-mode 1)            ; Enable template insertion menu
+;;;;not for emacs24 
+;;;;cedet development environment
+;;(load-file "~/.emacs.d/cedet-1.0/common/cedet.el")
+;;(global-ede-mode 1)                      ; Enable the Project management system
+;;(semantic-load-enable-code-helpers)      ; Enable prototype help and smart completion 
+;;(global-srecode-minor-mode 1)            ; Enable template insertion menu
 
 (add-to-list 'load-path "~/.emacs.d/ecb-2.40")
 ;;ecb source code browser
@@ -200,6 +202,14 @@
 (require 'textmate)
 (textmate-mode)
 
-(add-to-list 'load-path "~/.emacs.d/highlight-regexp.el")
 (require 'highlight-regexp)
 
+(add-to-list 'load-path "~/.emacs.d/evernote-mode/")
+(require 'evernote-mode)
+(global-set-key "\C-cec" 'evernote-create-note) ;; Ctrl+c e c
+(global-set-key "\C-ceo" 'evernote-open-note) 
+(global-set-key "\C-ces" 'evernote-search-notes) 
+(global-set-key "\C-ceS" 'evernote-do-saved-search) 
+(global-set-key "\C-cew" 'evernote-write-note) 
+(global-set-key "\C-cep" 'evernote-post-region) 
+(global-set-key "\C-ceb" 'evernote-browser)
