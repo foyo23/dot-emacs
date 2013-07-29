@@ -1,3 +1,5 @@
+;;隐藏menu bar
+(menu-bar-mode -1)
 ;;禁用启动画面
 (setq inhibit-startup-message t)
 (setq default-tab-width 2)
@@ -107,8 +109,8 @@
 (setq-default make-backup-files nil)
 
 ;;使用utf-8编码
-;;(prefer-coding-system 'utf-8-with-signature)
-(prefer-coding-system 'utf-8)
+(prefer-coding-system 'utf-8-with-signature)
+;;(prefer-coding-system 'utf-8)
 
 ;;只渲染当前屏幕语法高亮，加快显示速度
 (setq lazy-lock-defer-on-scrolling t)

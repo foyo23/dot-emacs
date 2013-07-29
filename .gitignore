@@ -1,5 +1,6 @@
-﻿*.loc~
+﻿.saves*
+*.loc~
 *.el~
-
+auto-save-list
 
 
