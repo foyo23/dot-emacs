@@ -212,9 +212,9 @@
 ;; color theme
 ;;(require 'color-theme)
 (require 'color-theme-autoloads)
-(color-theme-initialize)
+;;(color-theme-initialize)
 
 ;;(require 'color-theme-blackboard)
 (load-file "~/.emacs.d/themes/color-theme-blackboard.el")
-(color-theme-blackboard)
+;;(color-theme-blackboard)
 
