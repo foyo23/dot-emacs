@@ -1,3 +1,8 @@
 this is foyo23's emacs configure files, foyo23@gmail.com
 
 ONLY FIT FOR emacs 24.3!
+
+## setup
+1. copy .emacs to your home directory
+2. copy .emacs.d directory to your home directory
+
